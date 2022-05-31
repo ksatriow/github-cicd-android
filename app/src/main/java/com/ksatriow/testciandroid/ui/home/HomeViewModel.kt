@@ -1,13 +1,23 @@
 package com.ksatriow.testciandroid.ui.home
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val clicks = MutableLiveData<Int>()
+
+    init {
+        clicks.value = 0
     }
-    val text: LiveData<String> = _text
+
+
+    fun adding(value: Int) {
+        clicks.value = clicks.value?.plus(1)
+    }
+
+    fun minus(value: Int) {
+        clicks.value = clicks.value?.minus(1)
+    }
+
 }
