@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "206987359051",
+    "project_id": "cicdandroid-94be3",
+    "storage_bucket": "cicdandroid-94be3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206987359051:android:6325085d66ef7a7ad16ece",
+        "android_client_info": {
+          "package_name": "com.ksatriow.testciandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206987359051-gisvqbmuvia4tfphinbjnf0fq68e68g0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMc43O8yCj1UCD7hLnDPMPVstV3bJlG-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206987359051-gisvqbmuvia4tfphinbjnf0fq68e68g0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Generating Signed Build
+name: Generating Signed Build and deploy in firebase
 
 # Controls when the action will run.
 on:
@@ -50,3 +50,22 @@ jobs:
         with:
           name: mapping.txt
           path: app/build/outputs/mapping/release/mapping.txt
+
+  deploy-firebase:
+    # 1
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    steps:
+      # 2
+      - uses: actions/download-artifact@master
+        with:
+          name: release.apk
+      #3
+      - name: upload artifact to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          # found mobilesdk_app_id in  google-services.json file
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          token: ${{secrets.FIREBASE_TOKEN}}
+          groups: testers
+          file: app-release-unsigned-signed.apk
